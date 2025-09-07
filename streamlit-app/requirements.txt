@@ -2,3 +2,4 @@ streamlit
 scikit-learn
 beautifulsoup4
 thefuzz
+distance
