@@ -1,5 +1,5 @@
 import pickle
 
+# After training your model (e.g. model = LogisticRegression().fit(...))
 with open('model.pkl', 'wb') as f:
     pickle.dump(model, f)
-
