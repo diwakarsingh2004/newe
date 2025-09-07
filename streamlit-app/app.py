@@ -2,7 +2,12 @@ import streamlit as st
 import helper
 import pickle
 
-model = pickle.load(open('model.pkl','rb'))
+import os
+
+model_path = os.path.join(os.path.dirname(__file__), 'model.pkl')
+with open(model_path, 'rb') as f:
+    model = pickle.load(f)
+
 
 st.header('Duplicate Question Pairs')
 
@@ -17,5 +22,6 @@ if st.button('Find'):
         st.header('Duplicate')
     else:
         st.header('Not Duplicate')
+
 
 
